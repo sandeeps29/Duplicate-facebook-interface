@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://sandeeps29.github.io/Duplicate-facebook-interface",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preload":"npm run build",
-    "deploy" :"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "rmdir /s /q build && mkdir build && xcopy index.html build && xcopy styles.css build"
   },
   "author": "",
   "license": "ISC",
