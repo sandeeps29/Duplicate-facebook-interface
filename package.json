@@ -8,8 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build": "rmdir /s /q build && mkdir build && xcopy index.html build && xcopy styles.css build"
+    "build": "rmdir /s /q build && mkdir build && xcopy index.html build && xcopy styles.css build && xcopy /s /e /y \"fb images\" \"build\\fb images\" && xcopy /y \"fb images\\fb image duplicate.jpg\" \"build\\fb images\""
   },
+  
   "author": "",
   "license": "ISC",
   "devDependencies": {
